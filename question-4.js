@@ -5,3 +5,8 @@ const inventory = [
   { name: "Orange", price: 30, quantity: 60 },
 ];
 // เริ่มเขียนโค้ดตรงนี้
+
+
+// 1.for loop วนดูค่าในแต่ละ index เพื่อเช็คค่า
+// 2.สร้างตัวแปร Max,min เพื่อเก็บค่า
+ 
