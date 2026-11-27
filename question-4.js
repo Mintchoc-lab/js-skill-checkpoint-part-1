@@ -6,7 +6,12 @@ const inventory = [
 ];
 // เริ่มเขียนโค้ดตรงนี้
 
+let minPrice = inventory[0];
 
-// 1.for loop วนดูค่าในแต่ละ index เพื่อเช็คค่า
-// 2.สร้างตัวแปร Max,min เพื่อเก็บค่า
- 
+for (let i = 1; i < inventory.length; i++) {
+  if (inventory[i].quantity < minPrice.quantity) {
+    minPrice = inventory[i];
+  }
+}
+
+console.log(`สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${minPrice.name} ซึ่งมี ${minPrice.quantity} ชิ้น`);

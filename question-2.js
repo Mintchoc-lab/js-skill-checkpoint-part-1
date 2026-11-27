@@ -6,9 +6,11 @@ const inventory = [
 // เริ่มเขียนโค้ดตรงนี้
 
 inventory[0].quantity = 200;
-inventory.push({ name: "Orange", price: 20, quantity: 300 },);
+inventory.push({ name: "Orange", price: 20, quantity: 300 });
 
-//ลืมว่าต้องเอา value ใน key มาบวกกันยังไง
-//ต้องหาค่า price*quantity ของแต่ละอันก่อน แล้วนำผลทั้งหมดมารวมกัน
+let total = 0;
+for (let i = 0; i < inventory.length ; i++){
+  total += inventory[i].price * inventory[i].quantity;
+}
 
-console.log("มูลค่ารวมของจำนวนสินค้าทั้งหมดในสต็อก"+   +"บาท");
+console.log(`มูลค่ารวมของจำนวนสินค้าทั้งหมดในสต็อก ${total} บาท`);
